@@ -1,7 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
+import App from './App'
+//import serviceWorker from './serviceWorker'
 
+/*
 function Person(props){
   return (
     <div className="person">
@@ -19,3 +22,8 @@ let app = (
   )
 
 ReactDOM.render(app, document.querySelector('#app'))
+*/
+
+ReactDOM.render(<App />, document.getElementById('app'))
+
+//serviceWorker()
