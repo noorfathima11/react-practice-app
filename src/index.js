@@ -11,6 +11,11 @@ function Person(props){
   )
 }
 
-ReactDOM.render(<Person name="Max" age="28"/>, document.querySelector('#p1'))
+let app = (
+  <div>
+    <Person name="Max" age="28"/>
+    <Person name="Noor" age="26"/>
+  </div>
+  )
 
-ReactDOM.render(<Person name="Noor" age="26"/>, document.querySelector('#p2'))
+ReactDOM.render(app, document.querySelector('#app'))
