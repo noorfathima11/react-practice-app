@@ -12,36 +12,31 @@ import Person from './Person/Person'
 }*/
 
 class App extends Component {
-
-  constructor(props){
-    super(props)
-    this.state = {
+  state = {
     persons: [
-      {"name" : "Debi", "age" : 29},
-      {"name" : "Akshay", "age" : 25},
+      {"name" : "Debi", "age" : 24},
+      {"name" : "Akshay", "age" : 24},
       {"name" : "Nitin", "age" : 25}
     ]
   }
-  this.switchNameHandler= this.switchNameHandler.bind(this)
-}
 
-  switchNameHandler (newName) {
+  switchNameHandler = (newName) => {
    // console.log('Was Clicked')
    //Do not do this ! this.state.persons[0].name = 'Debi Dhar'
    this.setState({
     persons: [
       {"name" : newName, "age" : 24},
-      {"name" : "Akshay", "age" : 200},
-      {"name" : "Nitin", "age" : 250}
+      {"name" : "Akshay", "age" : 25},
+      {"name" : "Nitin", "age" : 25}
     ]
+
    })
+
   }
 
   render(){
     return (
-      <div onClick={function(){
-        console.log(this)
-      }} className="App">
+      <div className="App">
        <h1>Hi! I am a React App. </h1>
        <button onClick={() => this.switchNameHandler("Debi Dhar")}>Switch Name</button>
        <Person
